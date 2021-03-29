@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background: cornflowerblue;
+            color: cornsilk;
+        }
+        div#divres {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste</h1>
+    Vc mora em qual país? <input type="text" name="dand" id="pais">
+    <input type="button" id="go" value="GO!">
+    <div id="divres">
+
+    </div>
+
+    <script>
+        var res = document.querySelector('div#divres')
+        var country = document.querySelector('input#pais')
+        var bt = document.querySelector('input#go')
+
+        bt.addEventListener('click', testar)
+
+        function testar() {
+            res.innerHTML = `Vc mora em <b>${country.value.toUpperCase()}</b><br>`
+            if (country.value.toUpperCase() == 'BRASIL') {
+                res.innerHTML += 'Vc é brasileiro!'
+            } 
+            else {
+                res.innerHTML += 'Vc é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>

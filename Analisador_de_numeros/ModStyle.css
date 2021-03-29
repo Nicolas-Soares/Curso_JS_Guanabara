@@ -1,0 +1,41 @@
+body {
+    font: normal 15pt Arial;
+    background: cornflowerblue;
+}
+
+header {
+    color: cornsilk;
+    text-align: center;
+}
+
+section {
+    background: cornsilk;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+}
+
+footer {
+    color: cornsilk;
+    text-align: center;
+    font-style: italic;
+}
+
+input#numero {
+    width: 30%;
+}
+
+ul {
+   width: fit-content;
+   height: 150px;
+   overflow: hidden;
+   overflow-y: scroll;
+   list-style-type: none;
+   background: whitesmoke;
+}
+
+#result {
+    margin-top: 15px;
+}

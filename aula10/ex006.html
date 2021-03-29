@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(136, 171, 236);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var dv1 = document.querySelector('div#area')
+        dv1.addEventListener('click', clicar)
+        dv1.addEventListener('mouseover', transic)
+        dv1.addEventListener('mouseout', transic1)
+
+        function clicar() {
+            dv1.style.background = 'crimson'
+            dv1.innerHTML = '<b>Clicou!</b>'
+        }
+
+        function transic() {
+            dv1.innerText = 'Entrou!'
+            dv1.style.width = '300px'
+            dv1.style.transition = 'width 1s'
+        }
+        function transic1() {
+            dv1.innerText = 'Saiu!'
+            dv1.style.width = '200px'
+            dv1.style.transition = 'width 1s'
+            dv1.style.background = 'rgb(136, 171, 236)'
+        }
+    
+    </script>
+</body>
+</html>
